@@ -27,7 +27,7 @@ SELECT * FROM Customers WHERE CustomerDesc = 'ALICE';
 UPDATE Customers SET ContantName = 'Maria Anders'
 WHERE CustomerID = 'ALFKI';
 
--- DELETE statements removes records from the database
+-- DELETE statements removes records from the databases
 DELETE FROM Orders WHERE OrderID = 10248;
 
 
