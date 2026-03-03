@@ -4,7 +4,7 @@ USE Northwind;
 Select * From Shippers; 
 
 -- Retrieve a list of customers sorted by country and contact name 
-Select Top 5 ContantName, Country, Phone FROM Customers ORDER BY Country, ContactName;
+Select Top 5 ContactName, Country, Phone FROM Customers ORDER BY Country, ContactName;
 
 -- Filter records to see only one customer's order
 SELECT CustomerID, OrderDate, ShipCity FROM Orders 
@@ -17,14 +17,14 @@ WHERE c.CompanyName = 'Quick-Stop';
 
 -- Add a record to the database 
 -- using Insert statements
-INSERT INTO Customers (CustomerID, ContactName, CompanyName, Country)
-VALUES ('ALICE, Alice Johnson', 'Wonderful Widgets', 'USA');
+INSERT INTO Customers (CustomerID, ContactName, CompanyName, Country) 
+VALUES ('ALICE', 'Alice Johnson', 'Wonderful Widgets', 'USA');
 
 -- Double Check that it was added
-SELECT * FROM Customers WHERE CustomerDesc = 'ALICE';
+SELECT * FROM Customers WHERE CustomerID='ALICE';
 
 -- Use the update statment to modify data
-UPDATE Customers SET ContantName = 'Maria Anders'
+UPDATE Customers SET ContactName = 'Maria Anders'
 WHERE CustomerID = 'ALFKI';
 
 -- DELETE statements removes records from the databases
